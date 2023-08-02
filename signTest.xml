@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" thread-count="2">
+<suite name="Suite" thread-count="2" parallel="tests">
 	<test name="Test">
 		<parameter name="testrail_run_id" value="1"></parameter>
 		<parameter name="closebrowser_after_test" value="true"></parameter>

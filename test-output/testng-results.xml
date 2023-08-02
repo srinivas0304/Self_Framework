@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Execute test case loginTest]]>
+      <![CDATA[Execute test case loginTest2]]>
     </line>
     <line>
       <![CDATA[Checking if driver session is closed!!]]>
@@ -26,31 +26,7 @@
       <![CDATA[Launching uRL: https://demo.actitime.com/login.do]]>
     </line>
     <line>
-      <![CDATA[Click : By.xpath: //input[@id='username']]]>
-    </line>
-    <line>
-      <![CDATA[Typing value : admin]]>
-    </line>
-    <line>
-      <![CDATA[Cleaning textbox value]]>
-    </line>
-    <line>
       <![CDATA[Wait for element to be present in DOM : By.xpath: //input[@id='username']]]>
-    </line>
-    <line>
-      <![CDATA[Wait for element to be present in DOM : By.xpath: //input[@id='username']]]>
-    </line>
-    <line>
-      <![CDATA[Wait for element to be present in DOM : By.xpath: //input[@id='username']]]>
-    </line>
-    <line>
-      <![CDATA[value in input box: admin]]>
-    </line>
-    <line>
-      <![CDATA[Typing value : manager]]>
-    </line>
-    <line>
-      <![CDATA[Cleaning textbox value]]>
     </line>
     <line>
       <![CDATA[Wait for element to be present in DOM : By.xpath: //input[@name='pwd']]]>
@@ -65,15 +41,18 @@
       <![CDATA[In After Method..]]>
     </line>
     <line>
+      <![CDATA[TestCaseId/TestRunId is either missing or null. Hence not updating status on TestRail]]>
+    </line>
+    <line>
       <![CDATA[Terminating Driver Session... ]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-07-27T16:14:00 IST" name="Suite" finished-at="2023-07-27T16:14:30 IST" duration-ms="30589">
+  <suite started-at="2023-08-02T11:05:18 IST" name="Suite" finished-at="2023-08-02T11:05:34 IST" duration-ms="15223">
     <groups>
     </groups>
-    <test started-at="2023-07-27T16:14:00 IST" name="Test" finished-at="2023-07-27T16:14:30 IST" duration-ms="30589">
+    <test started-at="2023-08-02T11:05:18 IST" name="Test" finished-at="2023-08-02T11:05:34 IST" duration-ms="15223">
       <class name="actitimePages.SigninTest">
-        <test-method is-config="true" signature="beforeTestMethod(java.lang.String,java.lang.String)[pri:0, instance:actitimePages.SigninTest@7b2bbc3]" started-at="2023-07-27T16:14:00 IST" name="beforeTestMethod" finished-at="2023-07-27T16:14:00 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="beforeTestMethod(java.lang.String,java.lang.String)[pri:0, instance:actitimePages.SigninTest@712625fd]" started-at="2023-08-02T11:05:18 IST" name="beforeTestMethod" finished-at="2023-08-02T11:05:18 IST" duration-ms="14" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -85,11 +64,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method is-config="true" signature="initialSetup()[pri:0, instance:actitimePages.SigninTest@7b2bbc3]" started-at="2023-07-27T16:14:00 IST" name="initialSetup" finished-at="2023-07-27T16:14:00 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="initialSetup()[pri:0, instance:actitimePages.SigninTest@712625fd]" started-at="2023-08-02T11:05:18 IST" name="initialSetup" finished-at="2023-08-02T11:05:18 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:actitimePages.SigninTest@7b2bbc3]" started-at="2023-07-27T16:14:00 IST" name="beforeMethod" finished-at="2023-07-27T16:14:03 IST" duration-ms="2939" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:actitimePages.SigninTest@712625fd]" started-at="2023-08-02T11:05:18 IST" name="beforeMethod" finished-at="2023-08-02T11:05:21 IST" duration-ms="3107" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -127,18 +106,18 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[public void actitimePages.SigninTest.loginTest()]]>
+                <![CDATA[public void actitimePages.SigninTest.loginTest2() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[org.testng.TestRunner@7abeabe9]]>
+                <![CDATA[org.testng.TestRunner@30f842ca]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Execute test case loginTest]]>
+              <![CDATA[Execute test case loginTest2]]>
             </line>
             <line>
               <![CDATA[Checking if driver session is closed!!]]>
@@ -160,41 +139,17 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="login()[pri:0, instance:actitimePages.SigninTest@7b2bbc3]" started-at="2023-07-27T16:14:03 IST" name="login" finished-at="2023-07-27T16:14:10 IST" duration-ms="7450" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:actitimePages.SigninTest@712625fd]" started-at="2023-08-02T11:05:21 IST" name="login" finished-at="2023-08-02T11:05:29 IST" duration-ms="7212" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Launching uRL: https://demo.actitime.com/login.do]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="loginTest()[pri:0, instance:actitimePages.SigninTest@7b2bbc3]" started-at="2023-07-27T16:14:10 IST" name="loginTest" finished-at="2023-07-27T16:14:27 IST" duration-ms="16788" status="PASS">
+        <test-method signature="loginTest2()[pri:0, instance:actitimePages.SigninTest@712625fd]" started-at="2023-08-02T11:05:29 IST" name="loginTest2" finished-at="2023-08-02T11:05:33 IST" duration-ms="4403" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Click : By.xpath: //input[@id='username']]]>
-            </line>
-            <line>
-              <![CDATA[Typing value : admin]]>
-            </line>
-            <line>
-              <![CDATA[Cleaning textbox value]]>
-            </line>
-            <line>
               <![CDATA[Wait for element to be present in DOM : By.xpath: //input[@id='username']]]>
-            </line>
-            <line>
-              <![CDATA[Wait for element to be present in DOM : By.xpath: //input[@id='username']]]>
-            </line>
-            <line>
-              <![CDATA[Wait for element to be present in DOM : By.xpath: //input[@id='username']]]>
-            </line>
-            <line>
-              <![CDATA[value in input box: admin]]>
-            </line>
-            <line>
-              <![CDATA[Typing value : manager]]>
-            </line>
-            <line>
-              <![CDATA[Cleaning textbox value]]>
             </line>
             <line>
               <![CDATA[Wait for element to be present in DOM : By.xpath: //input[@name='pwd']]]>
@@ -206,12 +161,12 @@
               <![CDATA[onTestSuccess....]]>
             </line>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:actitimePages.SigninTest@7b2bbc3]" started-at="2023-07-27T16:14:27 IST" name="afterMethod" finished-at="2023-07-27T16:14:30 IST" duration-ms="3359" status="PASS">
+        </test-method> <!-- loginTest2 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:actitimePages.SigninTest@712625fd]" started-at="2023-08-02T11:05:33 IST" name="afterMethod" finished-at="2023-08-02T11:05:34 IST" duration-ms="429" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginTest status=SUCCESS method=SigninTest.loginTest()[pri:0, instance:actitimePages.SigninTest@7b2bbc3] output=Click : By.xpath: //input[@id='username']]]]>
+                <![CDATA[[TestResult name=loginTest2 status=SUCCESS method=SigninTest.loginTest2()[pri:0, instance:actitimePages.SigninTest@712625fd] output=Wait for element to be present in DOM : By.xpath: //input[@id='username']]]]>
               </value>
             </param>
           </params>
@@ -220,11 +175,14 @@
               <![CDATA[In After Method..]]>
             </line>
             <line>
+              <![CDATA[TestCaseId/TestRunId is either missing or null. Hence not updating status on TestRail]]>
+            </line>
+            <line>
               <![CDATA[Terminating Driver Session... ]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="postScriptsCleaning()[pri:0, instance:actitimePages.SigninTest@7b2bbc3]" started-at="2023-07-27T16:14:30 IST" name="postScriptsCleaning" finished-at="2023-07-27T16:14:30 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="postScriptsCleaning()[pri:0, instance:actitimePages.SigninTest@712625fd]" started-at="2023-08-02T11:05:34 IST" name="postScriptsCleaning" finished-at="2023-08-02T11:05:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postScriptsCleaning -->

@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\SelfFramework\FrameworkArchi\signTest.xml</span>
+                    <span>C:\Users\SrinivasAddla\Downloads\FrameworkArchi\signTest.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="actitimePages.SigninTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="actitimePages.SigninTest" class="method navigator-link" hash-for-method="loginTest2">loginTest2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,9 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
+                  <a name="loginTest2">
+                  </a> <!-- loginTest2 -->
+                  <span class="method-name">loginTest2</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,14 +137,14 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\SelfFramework\FrameworkArchi\signTest.xml</span>
+            <span class="header-content">C:\Users\SrinivasAddla\Downloads\FrameworkArchi\signTest.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;Test&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;testrail_run_id&quot; value=&quot;1&quot;/&gt;
     &lt;parameter name=&quot;closebrowser_after_test&quot; value=&quot;true&quot;/&gt;
     &lt;classes&gt;
@@ -190,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginTest')
+data.setCell(0, 1, 'loginTest2')
 data.setCell(0, 2, 'actitimePages.SigninTest')
-data.setCell(0, 3, 16788);
+data.setCell(0, 3, 4403);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -209,17 +209,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">loginTest</span>
+              <span class="reporter-method-name">loginTest2</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Click : By.xpath: //input[@id='username']</span>
-                <span class="reporter-method-output">Typing value : admin</span>
-                <span class="reporter-method-output">Cleaning textbox value</span>
                 <span class="reporter-method-output">Wait for element to be present in DOM : By.xpath: //input[@id='username']</span>
-                <span class="reporter-method-output">Wait for element to be present in DOM : By.xpath: //input[@id='username']</span>
-                <span class="reporter-method-output">Wait for element to be present in DOM : By.xpath: //input[@id='username']</span>
-                <span class="reporter-method-output">value in input box: admin</span>
-                <span class="reporter-method-output">Typing value : manager</span>
-                <span class="reporter-method-output">Cleaning textbox value</span>
                 <span class="reporter-method-output">Wait for element to be present in DOM : By.xpath: //input[@name='pwd']</span>
                 <span class="reporter-method-output">Click : By.xpath: //div[text()='Login ']</span>
                 <span class="reporter-method-output">onTestSuccess....</span>
@@ -229,9 +221,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">actitimePages.SigninTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -247,27 +246,27 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">initialSetup</span>
-                <span class="method-start">21 ms</span>
+                <span class="method-start">38 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(null, null, true, null, null, null, 1, null, null, null, public void actitimePages.SigninTest.loginT...)</span>
-                <span class="method-start">31 ms</span>
+                <span class="method-start">54 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">login</span>
-                <span class="method-start">2970 ms</span>
+                <span class="method-start">3162 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">10420 ms</span>
+                <span class="method-name">loginTest2</span>
+                <span class="method-start">10374 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=loginTest status=SUCCESS method=SigninTest.loginTest()[pri:0, instance:actitimePage...)</span>
-                <span class="method-start">27225 ms</span>
+                <span class="method-name">afterMethod([TestResult name=loginTest2 status=SUCCESS method=SigninTest.loginTest2()[pri:0, instance:actitimePa...)</span>
+                <span class="method-start">14788 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">postScriptsCleaning</span>
-                <span class="method-start">30605 ms</span>
+                <span class="method-start">15247 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

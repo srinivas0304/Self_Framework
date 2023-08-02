@@ -1,5 +1,9 @@
 package actitimePages;
 
+import java.io.FileReader;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.By;
 import utils.BaseActionDriver;
 import utils.CommonUtil;
@@ -36,5 +40,19 @@ public class SigninPage
 			System.out.println("the element is present: "+verifyLogo);
 			commonUtil.waitInSeconds(6);
 		}
+	}
+	
+	public void loginfromJson() throws Exception
+	{
+		Thread.sleep(2000);
+		
+		JSONParser jsonParser = new JSONParser();
+		JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("C://Users//SrinivasAddla//Downloads//FrameworkArchi//src//test//resources//testdata//logindata.json"));
+		String usrname= (String)jsonObject.get("username");
+		String passwrd= (String)jsonObject.get("password");
+		actionDriver.getElement(usernameTextbox).sendKeys(usrname);
+		actionDriver.getElement(passwordTextbox).sendKeys(passwrd);
+		actionDriver.click(signInButton);
+		Thread.sleep(2000);
 	}
 }

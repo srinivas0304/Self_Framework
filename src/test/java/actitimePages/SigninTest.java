@@ -16,10 +16,18 @@ public class SigninTest extends BaseTest
 	}
 	
 	@TestInfo(testRailId = TestRaild.C3)
-	@Test
+	@Test(enabled = false)
 	public void loginTest()
 	{
 		SigninPage sign = new SigninPage();
 		sign.loginIntoApplication(CommonUtil.getConfigProperty("user_name"),CommonUtil.getConfigProperty("pass_word"));
 	}
+	
+	@Test
+	public void loginTest2 () throws Exception
+	{
+		SigninPage sign = new SigninPage();
+		sign.loginfromJson();
+	}
+	
 }

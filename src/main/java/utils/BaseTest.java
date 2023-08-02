@@ -1,7 +1,6 @@
 package utils;
 
 import org.testng.annotations.BeforeMethod;
-import actitimePages.SigninPage;
 
 public class BaseTest extends SeleniumBaseActionDriver {
 	
