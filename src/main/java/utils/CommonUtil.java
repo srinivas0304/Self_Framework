@@ -114,7 +114,7 @@ public class CommonUtil {
   }
   
   public enum Platform {
-    DESKTOP, MOBILE, API;
+    DESKTOP, MOBILE, API,DB;
   }
   
   public static synchronized void loadConfigProp() throws IOException {
@@ -146,7 +146,7 @@ public class CommonUtil {
       try {
         String baseFilePath = DIRECTORY.CONFIG_DIR;
         loadConfigProp();
-        if (platform != Platform.DESKTOP && platform != Platform.API) {
+        if (platform != Platform.DESKTOP && platform != Platform.API && platform != Platform.DB) {
           MOBILE_CONFIG = new Properties();
           MOBILE_CONFIG.load(new FileInputStream(String.valueOf(baseFilePath) + "mobile-config.properties"));
         } 

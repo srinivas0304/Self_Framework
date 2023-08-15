@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>FrameworkArchi</groupId>
@@ -25,6 +26,8 @@
 		<lombok-version>1.18.20</lombok-version>
 		<webdrivermanager-version>5.3.2</webdrivermanager-version>
 		<json-simple-version>1.1.1</json-simple-version>
+		<mysql-connector-j-version>8.1.0</mysql-connector-j-version>
+		<zap-clientapi-version>1.12.0</zap-clientapi-version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -78,7 +81,21 @@
 			<artifactId>json-simple</artifactId>
 			<version>${json-simple-version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>${mysql-connector-j-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.zaproxy</groupId>
+			<artifactId>zap-clientapi</artifactId>
+			<version>${zap-clientapi-version}</version>
+		</dependency>
+
 	</dependencies>
+
 	<build>
 		<resources>
 			<resource>
@@ -102,9 +119,7 @@
 					<version>${maven-surefire-plugin-version}</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
-							           
-						</suiteXmlFiles>
+							<suiteXmlFile>testng.xml</suiteXmlFile>             </suiteXmlFiles>
 					</configuration>
 				</plugin>
 			</plugins>

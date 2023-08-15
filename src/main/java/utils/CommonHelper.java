@@ -7,4 +7,5 @@ public class CommonHelper
 		
 		return CommonUtil.getConfigProperty(ConfigKeys.URL_ACTITIME);
 	}
+
 }
