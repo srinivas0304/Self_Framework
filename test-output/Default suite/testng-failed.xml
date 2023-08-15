@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="actitimePages.SigninTest">
+      <class name="dbUtils.DBConnection">
         <methods>
           <include name="login"/>
-          <include name="loginTest"/>
-          <include name="initialSetup"/>
           <include name="postScriptsCleaning"/>
           <include name="afterMethod"/>
+          <include name="connection"/>
           <include name="beforeTestMethod"/>
           <include name="beforeMethod"/>
+          <include name="initialSetup"/>
         </methods>
-      </class> <!-- actitimePages.SigninTest -->
+      </class> <!-- dbUtils.DBConnection -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

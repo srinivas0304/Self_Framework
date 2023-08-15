@@ -2,7 +2,7 @@ package utils;
 
 public class FrameworkConfigKeys
 {
-	public static final String TEST_ENV = "testEnv";
+	  public static final String TEST_ENV = "testEnv";
 	  
 	  public static final String BROWSER_NAME = "browser_name";
 	  
@@ -63,4 +63,12 @@ public class FrameworkConfigKeys
 	  public static final String ANDROIDAPP_ACTIVITY = "ANDROIDAPP_ACTIVITY";
 	  
 	  public static final String CLEAR_CACHE = "CLEAR_CACHE";
+	  
+	  public static final String DB_CONNECTION = "db_connection";
+	  
+	  public static final String DB_URL = "db_url";
+	  
+	  public static final String DB_USERNAME = "db_username";
+	  
+	  public static final String DB_PASSWORD = "db_password";
 }

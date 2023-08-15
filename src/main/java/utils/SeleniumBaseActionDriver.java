@@ -99,7 +99,7 @@ import testrail.TestRailUtil;
 	      getTestParamsMap().put("site", site); 
 	  }
 	  
-	  public void initializeTestParameters(String browser, String site, String closeBrowserAfterTest, String runOnGrid, String retryAttempt, String sheetName, String testRailRunId, String gridUrl, String cloudAndroidDeviceName, String cloudIOSDeviceName) {
+	  public void initializeTestParameters(String browser, String site, String closeBrowserAfterTest, String runOnGrid, String retryAttempt, String sheetName, String testRailRunId, String gridUrl, String cloudAndroidDeviceName, String cloudIOSDeviceName, String db_conn, String db_url, String db_user,String db_pass) {
 	    if (sheetName != null)
 	      getTestParamsMap().put("sheet_name", sheetName); 
 	    if (browser != null)
@@ -119,18 +119,32 @@ import testrail.TestRailUtil;
 	    if (cloudAndroidDeviceName != null)
 	      getTestParamsMap().put("CLOUD_ANDROID_MOBILE_DEVICES", cloudAndroidDeviceName); 
 	    if (cloudIOSDeviceName != null)
-	      getTestParamsMap().put("CLOUD_IOS_MOBILE_DEVICES", cloudIOSDeviceName); 
+	      getTestParamsMap().put("CLOUD_IOS_MOBILE_DEVICES", cloudIOSDeviceName);
+	    if(db_conn != null)
+	    	getTestParamsMap().put("DB_CONNECTION", db_conn);
+	    if(db_url != null)
+	    	getTestParamsMap().put("DB_URL", db_url);
+	    if(db_user != null)
+	    	getTestParamsMap().put("DB_USERNAME", db_user);
+	    if(db_pass != null)
+	    	getTestParamsMap().put("DB_PASSWORD", db_pass);	
 	  }
 	  
-	  @Parameters({"browser_name", "site", "closebrowser_after_test", "run_on_grid", "retry_attempt", "sheet_name", "testrail_run_id", "grid_hub_url", "CLOUD_ANDROID_MOBILE_DEVICES", "CLOUD_IOS_MOBILE_DEVICES"})
+	  @Parameters({"browser_name", "site", "closebrowser_after_test", "run_on_grid", "retry_attempt", "sheet_name", "testrail_run_id", "grid_hub_url", "CLOUD_ANDROID_MOBILE_DEVICES", "CLOUD_IOS_MOBILE_DEVICES","DB_CONNECTION","DB_URL","DB_USERNAME","DB_PASSWORD"})
 	  @BeforeMethod(alwaysRun = true)
-	  public synchronized void beforeMethod(@Optional String browser, @Optional String site, @Optional String closeBrowserAfterTest, @Optional String runOnGrid, @Optional String retryAttempt, @Optional String sheetName, @Optional String testRailRunId, @Optional String gridUrl, @Optional String cloudAndroidDeviceName, @Optional String cloudIOSDeviceName, Method method, ITestContext ctx) throws Exception {
+	  public synchronized void beforeMethod(@Optional String browser, @Optional String site, @Optional String closeBrowserAfterTest, @Optional String runOnGrid, @Optional String retryAttempt, @Optional String sheetName, @Optional String testRailRunId, @Optional String gridUrl, @Optional String cloudAndroidDeviceName, @Optional String cloudIOSDeviceName, @Optional String db_conn, @Optional String db_url, @Optional String db_user, @Optional String db_pass, Method method, ITestContext ctx) throws Exception {
 	    System.out.println("In Framework Before Method...");
 	    if (getBaseActionDriver() == null) {
 	      if (this.platform == CommonUtil.Platform.DESKTOP) {
 	        CommonUtil.setInitialConfigurations(CommonUtil.Platform.DESKTOP);
 	        baseActionDriverThread.set(new WebBaseActionDriver());
-	      } else {
+	      } 
+	      else if(this.platform == CommonUtil.Platform.DB)
+	      {
+	    	  CommonUtil.setInitialConfigurations(CommonUtil.Platform.DB);
+	          baseActionDriverThread.set(new WebBaseActionDriver());
+	      }
+	      else {
 	        Assert.assertTrue(false, "Platform not set. Please set to dekstop or mobile..");
 	      } 
 	      commonThread.set(new CommonUtil(getBaseActionDriver()));
@@ -140,7 +154,7 @@ import testrail.TestRailUtil;
 	    this.commonUtil = getCommonUtil();
 	    getCommonUtil().setTestCaseId(this.testFeatureName);
 	    SeleniumBaseActionDriver.method.set(method);
-	    initializeTestParameters(browser, site, closeBrowserAfterTest, runOnGrid, retryAttempt, sheetName, testRailRunId, gridUrl, cloudAndroidDeviceName, cloudIOSDeviceName);
+	    initializeTestParameters(browser, site, closeBrowserAfterTest, runOnGrid, retryAttempt, sheetName, testRailRunId, gridUrl, cloudAndroidDeviceName, cloudIOSDeviceName,db_conn,db_url,db_user,db_pass);
 	    String browserName = CommonUtil.getConfigProperty("browser_name");
 	    getBaseActionDriver().setBrowserName(browserName);
 	    getBaseActionDriver().setTestCaseName(method.getName());
@@ -157,7 +171,8 @@ import testrail.TestRailUtil;
 	        ctx.setAttribute("caseId", testInfo.testRailId());
 	        testRailCaseId.set(testInfo.testRailId());
 	      } 
-	    } 
+	    }
+	    
 	  }
 	  
 	  @AfterMethod(alwaysRun = true)
@@ -199,6 +214,12 @@ import testrail.TestRailUtil;
 	  public void initializeWebTest(String testFeatureName) {
 	    this.testFeatureName = testFeatureName;
 	    this.platform = CommonUtil.Platform.DESKTOP;
+	  }
+	  
+	  public void initializeDbTest(String testFeatureName)
+	  {
+		  this.testFeatureName = testFeatureName;
+		    this.platform = CommonUtil.Platform.DB;
 	  }
 	  
 	  public void closeBrowser() {

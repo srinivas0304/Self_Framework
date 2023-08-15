@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
-=======
-<suite thread-count="2" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" name="Test(failed)">
->>>>>>> srinivas
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Test(failed)">
     <parameter name="testrail_run_id" value="1"/>
     <parameter name="closebrowser_after_test" value="true"/>
     <classes>
